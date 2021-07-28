@@ -1,18 +1,12 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[80]:
-
-
+from bidi.algorithm import get_display
+import arabic_reshaper
+import matplotlib
+import matplotlib.pyplot as plt
+import pandas as pd
+import os
 class Engezny:
     def __init__(self, DataFrame):
         self.DataFrame = DataFrame
-        from bidi.algorithm import get_display
-        import arabic_reshaper
-        import matplotlib
-        import matplotlib.pyplot as plt
-        import pandas as pd
-        import os
     
     def visualize(self, start= 0, end = -1, location = 'Charts/', extention = 'jpg'):
         if end == -1:
