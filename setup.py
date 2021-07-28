@@ -13,7 +13,7 @@ setup(
   install_requires=[           # I get to this in a second
           'numpy',
           'pandas',
-          'bidi',
+          'python-bidi',
           'arabic_reshaper',
           'matplotlib'
       ],
