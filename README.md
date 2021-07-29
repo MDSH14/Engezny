@@ -24,7 +24,7 @@ Egz.visualise()
 ## Visualize Parameters
 1. start (int) default = 0
     - The start column index
-2. end (int) default= -1
+2. end (int) default= *the end of the DataFrame*
     - The end column index
 3. location (str) default= 'Charts/'
     - The file location to save charts in
