@@ -1,13 +1,20 @@
 # Engezny
-***Engezny*** is a python package that quickly generates all of the possible charts from pandas DataFrame and save them to your local machine.
-***Engezny*** is only supporting now the uniparameter visualization using the pie, bar and barh visualizations
+***Engezny*** is a python package that quickly generates all possible charts from your dataframe and save them for you as <b>JPG</b>, and engezny is only supporting now uniparameter visualization using the pie, bar and barh visualizations.
 
-## Installation
-To install ***Engezny*** you can use the command line `pip intall Engezny` or `pip3 intall Engezny`
+## Advanteges
+1. Totally supports Arabic Language.
+2. Handles multi-parameters columns and separates them by a comma.
+3. The output charts are fully descriptive.
 
-## Simple Use
+## Installation Guide
+To install ***Engezny*** Package:
+- Make sure python3 and pip is installed in your machine.
+- Use the command line and type: `pip install Engezny` or `pip3 install Engezny`
+- You can check if the package is installed by typing: `pip freeze | grep Engezny` or `pip3 freeze | grep Engezny`
+
+## How to Use?
 The most simple format of using ***Engezny*** is as follow:
-```
+```python
 from Engezny import Engezny
 import pandas as pd
 
@@ -16,17 +23,12 @@ Egz = Engezny(Data)
 Egz.visualise()
 ```
 
-## Advanteges:
-1. ***Engezny*** is totally supporting Arabic
-2. ***Engezny*** handles the multiparameters co;umns and sperate them by the comma
-3. The output charts are fully descriptive
-
-## Visualize Parameters
-1. start (int) default = 0
-    - The start column index
-2. end (int) default= *the end of the DataFrame*
-    - The end column index
-3. location (str) default= 'Charts/'
-    - The file location to save charts in
-4. extention (str) default= 'jpg'
-    - The extention of the created charts
+## Visualization Parameters
+- The start column index: `start (int) default = 0`
+    - Default Value: 0
+- The end column index: `end (int) default= -1`
+    - Default Value: -1
+- The file location to save charts in: `location = 'Charts/'`
+    - Default Value: 'Charts/' 
+- The extention of the created charts: `extention = 'jpg'`
+    - Default Value: 'jpg'
