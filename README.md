@@ -20,7 +20,7 @@ import pandas as pd
 
 Data = pd.read_csv("FileName.csv")
 Egz = Engezny(Data)
-Egz.visualise()
+Egz.visualize()
 ```
 
 ## Visualization Parameters
