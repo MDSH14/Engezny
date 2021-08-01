@@ -1,5 +1,5 @@
 # Engezny
-***Engezny*** is a python package that quickly generates all possible charts from your dataframe and save them for you as <b>JPG</b>, and engezny is only supporting now uniparameter visualization using the pie, bar and barh visualizations.
+***Engezny*** is a python package that quickly generates all possible charts from your dataframe and save them for you, and engezny is only supporting now uniparameter visualization using the pie, bar and barh visualizations.
 
 ## Advanteges
 1. Totally supports Arabic Language.
