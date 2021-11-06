@@ -1,6 +1,8 @@
 from distutils.core import setup
-from pathlib import Path
-long_description = Path("README.md").read_text()
+
+with open('README.md') as f:
+    long_description = f.read()
+
 setup(
   name = 'Engezny',         # How you named your package folder (MyLib)
   packages = ['Engezny'],   # Chose the same as "name"
