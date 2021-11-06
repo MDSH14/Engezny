@@ -8,11 +8,11 @@ class Engezny:
     def __init__(self, DataFrame):
         self.DataFrame = DataFrame
     
-    def labelcolor(self, colors):
+    def __labelcolor(self, colors):
         rgb = [tuple(int(item.lstrip('#')[i:i+2], 16) for i in (0, 2, 4)) for item in color]
         return ["white" if (0.2126*item[0] + 0.7152*item[1] + 0.0722*item[2]) < 128 else "black" for item in rgb]
     
-    def value_counts(self, Data, multi_sep=None, single_sep=None):
+    def __value_counts(self, Data, multi_sep=None, single_sep=None):
         if multi_sep == None and single_sep == None:
             return dict(Data.value_counts())
         Dict = dict()
@@ -30,7 +30,7 @@ class Engezny:
         return dict(sorted(Dict.items(), key=lambda item: item[1], reverse=True))
     
     
-    def save(self, location, Count, extention, item):
+    def __save(self, location, Count, extention, item):
         Title = '{}'.format(item).title()
         Title = ''.join(e for e in Title if e.isalnum())
         try:
@@ -54,7 +54,7 @@ class Engezny:
                   other= False):
         Count = 1
         for item in list(self.DataFrame)[start:end]:
-            Dict = self.value_counts(self.DataFrame[item], multi_sep, single_sep)
+            Dict = self.__value_counts(self.DataFrame[item], multi_sep, single_sep)
             if Dict == "Error":
                 continue
             
@@ -91,7 +91,7 @@ class Engezny:
                     Keys[i] += " (" + labels[i].split()[0] + ")"
 
                 _, _, autotexts = plt.pie(Values, labels=["" for k in Keys], autopct="%.1f%%", colors=colors)
-                for color, autotext in zip(self.labelcolor(colors), autotexts):
+                for color, autotext in zip(self.__labelcolor(colors), autotexts):
                     autotext.set_color(color)
                 plt.legend(loc = 'lower center', bbox_to_anchor=(0.25, -0.1, 0.5, 0.5), labels = Keys)
 
@@ -117,6 +117,6 @@ class Engezny:
 
             plt.title(get_display(arabic_reshaper.reshape(item.title())), fontsize=35)
             if save:
-                self.save(location, Count, extention, item)
+                self.__save(location, Count, extention, item)
             plt.show()
             Count += 1
