@@ -6,7 +6,7 @@ with open('README.md') as f:
 setup(
   name = 'Engezny',         # How you named your package folder (MyLib)
   packages = ['Engezny'],   # Chose the same as "name"
-  version = '1.1',      # Start with a small number and increase it with every change you make
+  version = '1.3',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Quick generation for charts from DataFrame',   # Give a short description about your library
   long_description = long_description,
@@ -14,7 +14,7 @@ setup(
   author = 'Mohammed Saleh',                   # Type in your name
   author_email = 'MohammedSaleh@ieee.org',      # Type in your E-Mail
   url = 'https://github.com/MDSH14',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/MDSH14/Engezny/archive/refs/tags/1.1.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/MDSH14/Engezny/archive/refs/tags/1.3.tar.gz',    # I explain this later on
   keywords = ['Analysis', 'Data', 'Charts'],   # Keywords that define your package best
   install_requires=[           # I get to this in a second
           'numpy',
