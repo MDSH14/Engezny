@@ -9,7 +9,7 @@ class Engezny:
         self.DataFrame = DataFrame
     
     def __labelcolor(self, colors):
-        rgb = [tuple(int(item.lstrip('#')[i:i+2], 16) for i in (0, 2, 4)) for item in color]
+        rgb = [tuple(int(item.lstrip('#')[i:i+2], 16) for i in (0, 2, 4)) for item in colors]
         return ["white" if (0.2126*item[0] + 0.7152*item[1] + 0.0722*item[2]) < 128 else "black" for item in rgb]
     
     def __value_counts(self, Data, multi_sep=None, single_sep=None):
@@ -45,7 +45,16 @@ class Engezny:
                   end = None,
                   location = 'Charts/',
                   extention = 'jpg',
-                  colors = None,
+                  colors = ['#1f77b4',
+                            '#ff7f0e',
+                            '#2ca02c',
+                            '#d62728',
+                            '#9467bd',
+                            '#8c564b',
+                            '#e377c2',
+                            '#7f7f7f',
+                            '#bcbd22',
+                            '#17becf'],
                   save=True,
                   multi_sep=None,
                   single_sep=None,
