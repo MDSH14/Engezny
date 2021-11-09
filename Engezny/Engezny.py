@@ -18,9 +18,12 @@ class Engezny:
         Dict = dict()
         try:
             for i in Data.dropna().index:
-                Words = str(Data).split(multi_sep)
+                Words = str(Data[i]).split(multi_sep)
                 for Word in Words:
-                    Word = Word.split(single_sep)[0].strip()
+                    if single_sep != None:
+                        Word = Word.split(single_sep)[0].strip()
+                    else:
+                        Word = Word.strip()
                     if Word in Dict.keys():
                         Dict[Word] += 1
                     else:
