@@ -1,5 +1,6 @@
 # Engezny
 [![](https://img.shields.io/github/license/sourcerer-io/hall-of-fame.svg?colorB=ff0000)](https://github.com/akshaybahadur21/Facial-Recognition-using-Facenet/blob/master/LICENSE.txt)  [![](https://img.shields.io/badge/Mohammed-Saleh-org.svg?colorB=ff0000)](https://mohammedsaleh.org/programming)
+
 ***Engezny*** is a python package that quickly generates all possible charts from your dataframe and save them for you, and engezny is only supporting now uniparameter visualization using the pie, bar and barh visualizations.
 
 ## New release features:
